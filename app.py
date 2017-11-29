@@ -41,7 +41,14 @@ def handle_message(event):
 
     if t == '嘉義':
         reply = '雞肉飯...'
-        
+    elif '嘉義' in t:
+        reply = '你說嘉義怎麼樣?'
+    elif t == '我要訂位':
+        reply = '請問幾個人?'
+    elif t == '1':
+        reply = '定位一人是嗎?'
+
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=reply))
